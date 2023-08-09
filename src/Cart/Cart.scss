@@ -1,0 +1,229 @@
+:root {
+  --primaryKeyColor: #ffffff;
+}
+
+.cart-container {
+  width: 100%;
+  height: auto;
+  padding-top: 10%;
+  background-color: #f5f5f5;
+  .cart-content {
+    width: 80%;
+    margin: 0 auto;
+    height: auto;
+    .cart-text {
+      width: 35%;
+      margin-left: 2%;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      h1 {
+        font-weight: 400;
+        color: #ee4d2d;
+      }
+      img {
+        width: 30%;
+        height: auto;
+        border-right: 1px solid #ee4d2d;
+        padding-right: 6.5%;
+      }
+    }
+    .all-product-cart {
+      width: 100%;
+      margin-top: 3%;
+      padding-bottom: 3%;
+      .notification-text {
+        font-size: 0.9rem;
+        background-color: var(--primaryKeyColor);
+        padding: 0.8% 10px;
+      }
+      .quantity {
+        input {
+          width: 40%;
+          padding: 10px 0px 10px 10px;
+          text-align: center;
+          background-color: #f5f5f5;
+          border: none;
+        }
+        button {
+          border: 1px solid #787878;
+          padding: 10px 15px;
+          cursor: pointer;
+          background-color: #f5f5f5;
+        }
+      }
+      .discount-code {
+        margin-top: 2%;
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+        background-color: var(--primaryKeyColor);
+        div {
+          font-size: 0.9rem;
+        }
+        .product-price {
+          font-size: 1.2rem;
+          font-weight: 700;
+          color: #cb2706;
+        }
+      }
+      .information-product-image {
+        width: 16%;
+        display: flex;
+        height: auto;
+        img {
+          width: 50%;
+          height: 50%;
+          object-fit: cover;
+          background-color: #101010;
+        }
+        p {
+          width: 100%;
+          padding-left: 10%;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+      div {
+        i {
+          color: #0bbc14;
+          font-weight: 700;
+        }
+      }
+      div {
+        b {
+          color: #cb2706;
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+
+  .purchase-content {
+    width: 80%;
+    margin: 2% auto;
+    height: auto;
+    background-color: var(--primaryKeyColor);
+    display: flex;
+    flex-direction: column;
+
+    .pay {
+      display: flex;
+      align-items: center;
+      justify-content: end;
+      font-size: 1rem;
+      p {
+        .total {
+          color: #cb2706;
+          font-size: 1.5rem;
+        }
+      }
+      button {
+        padding: 10px 20px;
+        cursor: pointer;
+        color: var(--primaryKeyColor);
+        background-color: #ee4d2d;
+        border: none;
+        outline: none;
+        &:active {
+          box-shadow: 0px 0px 3px #101010;
+        }
+      }
+    }
+    .select-all {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      font-size: 1rem;
+    }
+  }
+}
+
+@media screen and(min-width: 992px) {
+}
+@media screen and (max-width: 991px) {
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .cart-container {
+    width: 100%;
+    padding-top: 20%;
+    .cart-content {
+      width: 80%;
+      .cart-text {
+        width: 100% !important;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        img {
+          width: 30%;
+          border: none;
+        }
+        h1 {
+          font-size: 1rem !important;
+        }
+      }
+      .all-product-cart {
+        .notification-text {
+        }
+        .discount-code {
+          .information-product-image {
+            p {
+              display: none;
+            }
+          }
+          .product-price {
+            display: none;
+          }
+          .purchases {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and(max-width:767px) {
+  .cart-container {
+    width: 100%;
+    padding-top: 25%;
+    .cart-content {
+      width: 80%;
+      .cart-text {
+        width: 100% !important;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        img {
+          width: 50%;
+        }
+        h1 {
+          font-size: 1rem !important;
+        }
+      }
+      .all-product-cart {
+        .notification-text {
+        }
+        .discount-code {
+          .information-product-image {
+            p {
+              display: none;
+            }
+          }
+          .product-price {
+            display: none;
+          }
+          .purchases {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

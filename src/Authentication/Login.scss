@@ -1,0 +1,378 @@
+.login-header {
+  width: 100%;
+  .login-content {
+    width: 80%;
+    margin: 1% auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .login-logo {
+      display: flex;
+      align-items: center;
+      width: 50%;
+      .link-image {
+        display: flex;
+        align-items: center;
+        img {
+          width: 30%;
+        }
+      }
+      p {
+        font-size: 1.8rem;
+        padding-left: 15px;
+        font-weight: 380;
+      }
+    }
+    .login-help {
+      p {
+        color: #ee4d2d;
+        font-size: 1rem;
+        cursor: pointer;
+      }
+    }
+    &:hover {
+      text-decoration: underline #ee4d2d 2px;
+    }
+  }
+}
+.login-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .login-up {
+    width: 15%;
+    background-color: #ee4d2d;
+    height: 600px;
+  }
+  .login-information {
+    width: 50%;
+    background-color: #ee4d2d;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .login {
+      width: 55%;
+      height: 80%;
+      background-color: #ffffff;
+      border-radius: 5px;
+      .login-option {
+        width: 90%;
+        margin: 5% auto;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .option-title {
+          width: 40%;
+          font-size: 1.5rem;
+        }
+        .login-qr {
+          width: 60%;
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          div:nth-child(1) {
+            width: 60%;
+            font-size: 0.9rem;
+            border: 2px solid #ffbf00;
+            position: relative;
+            padding: 5px 0px 5px 10px;
+            border-radius: 5px;
+            color: #ffbf00;
+            font-weight: 500;
+            background-color: #fefaec;
+            &::before {
+              content: "";
+              width: 0;
+              height: 0;
+              border-left: 10px solid transparent;
+              border-right: 10px solid transparent;
+              border-bottom: 20px solid #ffbf00;
+              position: absolute;
+              top: 50%;
+              right: -20%;
+              transform: translate(-50%, -50%) rotate(90deg);
+            }
+          }
+
+          img {
+            width: 20%;
+            height: auto;
+            cursor: pointer;
+          }
+        }
+      }
+      .qr-camera {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+          width: 50%;
+        }
+      }
+      .login-input {
+        width: 90%;
+        margin: 2% auto;
+        input {
+          width: 90%;
+          padding: 10px 14px;
+          outline: none;
+          font-size: 1rem;
+        }
+      }
+      .login-password {
+        width: 90%;
+        margin: 7% auto;
+        position: relative;
+        input {
+          width: 90%;
+          padding: 10px 14px;
+          outline: none;
+          font-size: 1rem;
+        }
+        .icons {
+          position: absolute;
+          top: 50%;
+          right: 7%;
+          font-size: 1.3rem;
+          transform: translate(-50%, -50%);
+          cursor: pointer;
+          color: #5e5e5d;
+        }
+      }
+      .howto-qr {
+        width: 90%;
+        margin: 2% auto;
+        text-align: center;
+        font-size: 1rem;
+        color: #ee4d2d;
+        cursor: pointer;
+      }
+      .login-login {
+        width: 90%;
+        margin: 5% auto;
+        .disabled {
+          width: 98%;
+          padding: 11px 0px;
+          outline: none;
+          font-size: 1rem;
+          border: none;
+          background-color: #ee4d2d;
+          opacity: 0.6;
+          color: #ffffff;
+          cursor: not-allowed;
+        }
+        .isdisabled {
+          width: 98%;
+          padding: 11px 0px;
+          outline: none;
+          font-size: 1rem;
+          border: none;
+          background-color: #ee4d2d;
+          color: #ffffff;
+          cursor: pointer;
+        }
+      }
+      .forgot-password {
+        width: 90%;
+        margin: 1% auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        div {
+          font-size: 0.8rem;
+          color: #ee4d2d;
+          cursor: pointer;
+        }
+      }
+      .forgot-register {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        div {
+          font-size: 1rem;
+          margin-top: 5%;
+          color: #a9a8a8;
+          .link-css {
+            text-decoration: none;
+            color: #ee4d2d;
+          }
+        }
+      }
+      .login-image-fb {
+        width: 90%;
+        margin: 5% auto;
+        display: flex;
+        justify-content: space-between;
+        img:nth-child(1) {
+          width: 30%;
+          border: 1px solid #a9a9a7;
+          padding: 1px 10px;
+          background-size: cover;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+        img:nth-child(2) {
+          width: 25%;
+          border: 1px solid #a9a9a7;
+          padding: 5px 20px;
+          background-size: cover;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .login-image {
+    width: 35%;
+    display: flex;
+    align-items: center;
+    img {
+      object-fit: cover;
+    }
+  }
+}
+
+@media screen and(min-width: 992px) {
+}
+@media screen and (max-width: 991px) {
+  .login-header {
+    .login-content {
+      .login-logo {
+        .link-image {
+          img {
+            width: 100%;
+            height: 40px !important;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+  }
+  .login-body {
+    .login-up {
+      display: none;
+    }
+    .login-image {
+      display: none;
+    }
+    .login-information {
+      width: 100% !important;
+      .login {
+        width: 50%;
+        height: 470px;
+        .login-option {
+          .option-title {
+            width: 100%;
+            text-align: center;
+            font-size: 1.2rem;
+          }
+          .login-qr {
+            display: none;
+          }
+        }
+        .login-input {
+          width: 90%;
+
+          input {
+            font-size: 0.8rem;
+          }
+        }
+        .login-password {
+          width: 90%;
+
+          input {
+            font-size: 0.8rem;
+          }
+        }
+        .forgot-register {
+          div {
+            font-size: 0.8rem;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .slider-container {
+    padding-top: 30%;
+    width: 100% !important;
+    .slider-content {
+      width: 100%;
+      .slider-up {
+        width: 100%;
+        div {
+          width: 100%;
+          img {
+            width: 100% !important;
+          }
+        }
+      }
+      .slider-down {
+        display: none;
+      }
+    }
+  }
+}
+@media screen and(max-width:767px) {
+  .login-header {
+    .login-content {
+      .login-logo {
+        .link-image {
+          img {
+            width: 100%;
+            height: 40px !important;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+  }
+  .login-body {
+    .login-up {
+      display: none;
+    }
+    .login-image {
+      display: none;
+    }
+    .login-information {
+      width: 100% !important;
+      .login {
+        width: 80%;
+        height: 430px;
+        .login-option {
+          .option-title {
+            width: 100%;
+            text-align: center;
+            font-size: 1.2rem;
+          }
+          .login-qr {
+            display: none;
+          }
+        }
+        .login-input {
+          width: 90%;
+
+          input {
+            font-size: 0.8rem;
+          }
+        }
+        .login-password {
+          width: 90%;
+
+          input {
+            font-size: 0.8rem;
+          }
+        }
+        .forgot-register {
+          div {
+            font-size: 0.8rem;
+          }
+        }
+      }
+    }
+  }
+}

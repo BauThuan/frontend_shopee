@@ -1,0 +1,197 @@
+:root {
+  --primaryKeyColor: #ffffff;
+}
+.suggestion-container {
+  width: 100%;
+  background-color: #f5f5f5;
+  .suggestion-content {
+    width: 80%;
+    margin: 2% auto;
+    height: auto;
+    background-color: var(--primaryKeyColor);
+    padding: 0px 10px 10px;
+    border-radius: 5px;
+    .suggestion-title {
+      width: 100%;
+      border-bottom: 5px solid #fa5130;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      h2 {
+        padding-top: 10px;
+        font-size: 1.2rem;
+        font-weight: 400;
+        color: #fa5130;
+      }
+    }
+    .product-all {
+      margin-top: 2%;
+      width: 100%;
+      height: auto;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      .suggestion-products {
+        box-shadow: 0px 0px 3px #9e9c9c;
+        width: 16%;
+        border-radius: 5px 5px 0px 0px;
+        cursor: pointer;
+        position: relative;
+        margin-bottom: 2%;
+        &::after {
+          content: "Tìm sản phẩm tương tự";
+          position: absolute;
+          font-size: 0.8rem;
+          width: 100%;
+          text-align: center;
+          height: auto;
+          background-color: #fa5130;
+          color: var(--primaryKeyColor);
+          padding: 10px 0px;
+          display: none;
+          z-index: 8;
+        }
+        &:hover {
+          &::after {
+            display: block;
+          }
+          border: 1px solid #fa5130;
+        }
+
+        .product-image {
+          max-width: 100%;
+          height: auto;
+          border-bottom: 1px solid #fa5130;
+          border-top-left-radius: 5px;
+          border-top-right-radius: 5px;
+          position: relative;
+        }
+        .image-child {
+          position: absolute;
+          width: 70%;
+          height: 10%;
+          background-size: cover;
+          top: 55.7%;
+          left: 0;
+        }
+        .product-information {
+          width: 90%;
+          margin: 2% auto;
+          font-size: 0.8rem;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2; /* Chỉ hiển thị 2 dòng */
+          overflow: hidden; /* Ẩn nội dung bị tràn */
+          text-overflow: ellipsis; /* Thêm dấu "..." */
+        }
+        .clip-path {
+          position: absolute;
+          top: 0;
+          right: 2px;
+          width: 25%;
+          height: 20%;
+          background-color: #ffd700;
+          border-top-right-radius: 5px;
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 80%, 0 100%);
+        }
+        .clip-line {
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 26%;
+          height: 15%;
+          background-color: #ffd700;
+          border-bottom: 1px solid #ff8c00;
+          border-top-right-radius: 5px;
+          p:nth-child(1) {
+            text-align: center;
+            color: red;
+            font-size: 1rem;
+            line-height: 0.1rem;
+          }
+          p:nth-child(2) {
+            text-align: center;
+            font-size: 1rem;
+            line-height: 0.1rem;
+            color: var(--primaryKeyColor);
+            opacity: 1 !important;
+          }
+        }
+        .product-price {
+          width: 90%;
+          margin: 13% auto;
+          display: flex;
+          justify-content: space-between;
+          font-size: 0.8rem;
+          &::before {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-top: 5px solid #fa5130;
+            border-left: 5px solid transparent;
+            text-align: center;
+            padding: 1px 0px;
+            top: 10.5%;
+            left: -2%;
+            color: var(--primaryKeyColor);
+            z-index: 0;
+          }
+          span:nth-child(1) {
+            color: #fa5130;
+            font-weight: 500;
+          }
+          span:nth-child(2) {
+            color: #9e9c9c;
+            &::after {
+              content: "yêu thích";
+              position: absolute;
+              width: 40%;
+              text-align: center;
+              padding: 1px 0px;
+              height: auto;
+              top: 5%;
+              left: -2%;
+              background-color: #fa5130;
+              color: var(--primaryKeyColor);
+              z-index: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and(min-width: 992px) {
+}
+@media screen and (max-width: 991px) {
+  .suggestion-container {
+    .suggestion-content {
+      .product-all {
+        .suggestion-products {
+          width: 24%;
+          .image-child {
+            top: 52.7%;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+}
+@media screen and(max-width:767px) {
+  .suggestion-container {
+    .suggestion-content {
+      .product-all {
+        .suggestion-products {
+          width: 48%;
+          .image-child {
+            top: 52.7%;
+          }
+        }
+      }
+    }
+  }
+}

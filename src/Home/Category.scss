@@ -1,0 +1,109 @@
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 62.5%;
+  background-color: #f5f5f5;
+}
+.body-page-container {
+  padding-top: 1.5%;
+  padding-bottom: 2%;
+  width: 100%;
+  height: auto;
+  background-color: #f5f5f5;
+
+  .body-page-category {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #ffffff;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0px 0px 3px #bbb9b9;
+    overflow: hidden;
+    padding: 0px 10px 10px;
+    .body-page-title {
+      width: 99% !important ;
+      margin: auto;
+      padding-top: 1%;
+      font-size: 1.5rem;
+      font-weight: 400;
+    }
+    .body-page-list {
+      flex-wrap: wrap;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 5px;
+      padding: 0xp 10px;
+      max-width: 100%;
+
+      .body-page-information {
+        width: 9.1%;
+        height: 150px;
+        background-color: #ee4d2d;
+        color: #ffffff;
+        margin: 1% auto;
+        text-align: center;
+        border-radius: 5px;
+        cursor: pointer;
+        overflow: hidden !important;
+        transition: 0.5s;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        p {
+          width: 80%;
+          height: 10%;
+        }
+        .hover-image {
+          width: 50%;
+          transition: 0.5s;
+          object-fit: cover;
+          height: auto;
+          border-radius: 50%;
+        }
+        &:hover {
+          .hover-image {
+            transform: scale(1.6);
+            opacity: 1;
+          }
+          transform: scale(1.15);
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+@media screen and(min-width: 992px) {
+}
+@media screen and (max-width: 991px) {
+  .body-page-container {
+    .body-page-category {
+      .time-count-down {
+        width: 37% !important;
+      }
+      .body-page-list {
+        .body-page-information {
+          width: 18%;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+}
+@media screen and(max-width:767px) {
+  .body-page-container {
+    .body-page-category {
+      .time-count-down {
+        width: 40% !important;
+      }
+      .body-page-list {
+        .body-page-information {
+          margin-top: 10%;
+          width: 30%;
+        }
+      }
+    }
+  }
+}
